@@ -25,13 +25,15 @@ const AdminCompanyInfo = () => {
     // Handle nested social fields
     if (name.includes('.')) {
       const [parent, child] = name.split('.');
-      setFormData((prev) => ({
-        ...prev,
-        [parent]: {
-          ...prev[parent as keyof CompanyInfoType],
-          [child]: value
-        }
-      }));
+      if (parent === 'social') {
+        setFormData((prev) => ({
+          ...prev,
+          social: {
+            ...prev.social,
+            [child]: value
+          }
+        }));
+      }
     } else if (name === "foundedYear") {
       // Parse year as a number
       setFormData((prev) => ({ 
