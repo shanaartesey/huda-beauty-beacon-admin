@@ -7,7 +7,7 @@ export const products: Product[] = [
     name: "Legit Lashes Double-Ended Mascara",
     description: "A dual-ended volumizing and lengthening mascara for the ultimate false lash effect.",
     price: 29,
-    image: "https://images.unsplash.com/photo-1631214524020-3c587f9e4064?q=80&w=2574&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1631214524020-3c587f9e4064?q=80&w=800&auto=format&fit=crop",
     category: "Eyes"
   },
   {
@@ -15,7 +15,7 @@ export const products: Product[] = [
     name: "Easy Bake Loose Powder",
     description: "A loose powder that brightens and sets makeup for a flawless finish.",
     price: 34,
-    image: "https://images.unsplash.com/photo-1599733589046-d99f00fa4ea5?q=80&w=2574&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1599733589046-d99f00fa4ea5?q=80&w=800&auto=format&fit=crop",
     category: "Face"
   },
   {
@@ -23,7 +23,7 @@ export const products: Product[] = [
     name: "Power Bullet Matte Lipstick",
     description: "A highly-pigmented, comfortable matte lipstick with one-stroke application.",
     price: 25,
-    image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=2332&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=800&auto=format&fit=crop",
     category: "Lips"
   },
   {
@@ -31,7 +31,7 @@ export const products: Product[] = [
     name: "New Nude Eyeshadow Palette",
     description: "A revolutionized neutral eyeshadow palette with innovative textures and finishes.",
     price: 65,
-    image: "https://images.unsplash.com/photo-1560725613-4b52e67fc67f?q=80&w=2670&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
     category: "Eyes"
   },
   {
@@ -39,7 +39,7 @@ export const products: Product[] = [
     name: "Wishful Yo Glow Enzyme Scrub",
     description: "A gentle exfoliating scrub that reveals smooth, glowing skin.",
     price: 39,
-    image: "https://images.unsplash.com/photo-1607602160048-d0f67066a4c3?q=80&w=2574&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1607602160048-d0f67066a4c3?q=80&w=800&auto=format&fit=crop",
     category: "Skincare"
   },
   {
@@ -47,7 +47,7 @@ export const products: Product[] = [
     name: "Life Liner Double Ended Eyeliner",
     description: "A double-ended liquid and pencil eyeliner for versatile eye looks.",
     price: 25,
-    image: "https://images.unsplash.com/photo-1628602040839-08931ae7a823?q=80&w=2670&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1631214450975-cf2ec283b603?q=80&w=800&auto=format&fit=crop",
     category: "Eyes"
   },
 ];
