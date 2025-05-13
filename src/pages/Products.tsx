@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
+import { toast } from "@/components/ui/use-toast";
 
 const Products = () => {
   const { products } = useData();
@@ -27,6 +28,20 @@ const Products = () => {
     
     return matchesSearch && matchesCategory;
   });
+
+  // Handle view details button click
+  const handleViewDetails = (productId: string, productName: string) => {
+    toast({
+      title: "Product Selected",
+      description: `You selected ${productName}. Product details view coming soon!`,
+    });
+  };
+
+  // Reset filters
+  const resetFilters = () => {
+    setSearchTerm("");
+    setSelectedCategory("all");
+  };
 
   return (
     <div className="min-h-screen py-12 bg-gray-50">
@@ -67,7 +82,7 @@ const Products = () => {
           <div className="text-center py-12">
             <p className="text-lg text-gray-500">No products found matching your criteria.</p>
             <Button 
-              onClick={() => { setSearchTerm(""); setSelectedCategory("all"); }}
+              onClick={resetFilters}
               variant="link"
               className="text-beauty-pink mt-2"
             >
@@ -80,13 +95,17 @@ const Products = () => {
               <div 
                 key={product.id} 
                 id={product.id}
-                className="product-card bg-white rounded-lg shadow-md overflow-hidden"
+                className="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="h-64 overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.name} 
                     className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://images.unsplash.com/photo-1591985785613-50580c8c1194?q=80&w=800&auto=format&fit=crop";
+                    }}
                   />
                 </div>
                 <div className="p-6">
@@ -99,7 +118,7 @@ const Products = () => {
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-beauty-pink font-bold text-lg">${product.price}</span>
-                    <Button>View Details</Button>
+                    <Button onClick={() => handleViewDetails(product.id, product.name)}>View Details</Button>
                   </div>
                 </div>
               </div>
